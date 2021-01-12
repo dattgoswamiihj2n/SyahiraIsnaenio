@@ -42,6 +42,20 @@ public class Main {
             }
         }
     }
+/**
+     * Menampilkan view menambahkan todo list
+     */
+    public static void viewAddTodoList(){
+        System.out.println("Menambah TODOLIST");
+
+        var todo = input("Todo (x Jika Batal)");
+
+        if(todo.equals("x")){
+            //batal
+        }else{
+            businessLogic.addTodoList(todo);
+        }
+    }
 }
 
 /**
