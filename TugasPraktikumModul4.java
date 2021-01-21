@@ -3,12 +3,10 @@ package com.example;
 public class Main {
     public static BusinessLogic businessLogic = new BusinessLogic();
 
-    public static String[] model = new String[10];
-
     public static java.util.Scanner scanner  = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        
+        viewShowTodoList();
     }
 
     /**
@@ -42,7 +40,7 @@ public class Main {
             }
         }
     }
-/**
+    /**
      * Menampilkan view menambahkan todo list
      */
     public static void viewAddTodoList(){
@@ -54,6 +52,21 @@ public class Main {
             //batal
         }else{
             businessLogic.addTodoList(todo);
+        }
+    }
+    /**
+     * Menampilkan view menghapus todo list
+     */
+    public static void viewRemoveTodoList(){
+        System.out.println("Menghapus TODOLIST");
+        var number = input("Nomor yang Dihapus (x Jika Batal)");
+        if(number.equals("x")){
+            //batal
+        }else{
+            boolean success = businessLogic.removeTodoList(Integer.valueOf(number));
+            if(!success){
+                System.out.println("Gagal menghapus todoList : " + number);
+            }
         }
     }
 }
