@@ -7,7 +7,7 @@ public class Main {
 
     public static java.util.Scanner scanner  = new java.util.Scanner(System.in);
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         viewShowTodoList();
     }
 
@@ -77,7 +77,7 @@ public class Main {
  * Class Untuk Business Logic 
  */
 class BusinessLogic{
-    public static String[] model = new String[10];
+    public String[] model = new String[10];
 
     /**
      * Menampilkan todo list
